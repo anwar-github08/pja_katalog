@@ -1,0 +1,50 @@
+h1 {
+  text-align: center;
+}
+
+.konten-cetak {
+  padding: 20px;
+  width: 900px;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.konten-cetak .title-img {
+  text-align: center;
+}
+
+.konten {
+  padding: 20px;
+}
+
+.gambar {
+  width: 50%;
+}
+
+.detail {
+  width: 50%;
+  text-align: justify;
+}
+
+.footer .cp {
+  float: left;
+  font-size: small;
+}
+.footer .wk {
+  float: right;
+  font-size: small;
+}
+.footer {
+  margin-bottom: 20px;
+}
+
+.tombol button {
+  margin-left: 50%;
+}
+
+@media print {
+  .tombol {
+    display: none;
+  }
+}

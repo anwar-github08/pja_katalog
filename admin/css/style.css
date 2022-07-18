@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(231, 207, 146);
+}
+
+/* navbar */
+.col-md-2 {
+  background-color: rgb(180, 115, 41);
+}
+
+.col-md-2 li a {
+  color: white;
+}
+
+.flex-column {
+  position: sticky;
+  top: 50px;
+  margin: 50px 30px 0 30px;
+}
+
+.nav-link:hover {
+  background-color: rgb(231, 207, 146);
+  color: black;
+}
+
+/* untuk halaman login */
+.form-login .card {
+  background-color: rgb(180, 115, 41);
+  margin-top: 50%;
+}
+.form-login .card input {
+  background-color: rgb(231, 207, 146);
+}
+.form-login {
+  margin: auto;
+}
+
+.form-login .btn {
+  background-color: rgb(231, 207, 146);
+}
+
+/* index */
+.col-md-4 .card {
+  background-color: rgb(180, 115, 41);
+  color: white;
+}
+
+.card .card-title {
+  font-size: 40px;
+}
+
+.col-md-4 a {
+  text-decoration: none;
+}
+
+.card-dealer {
+  background: url(../../aset/img/cubes.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  transition: ease-in-out 0.6s;
+}
+.col-md-4 .card-dealer:hover {
+  background: url(../../aset/img/cubes.png);
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-color: rgb(180, 115, 41);
+}
+
+.card-jenis {
+  background: url(../../aset/img/cubes.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: ease-in-out 0.6s;
+}
+.col-md-4 .card-jenis:hover {
+  background: url(../../aset/img/cubes.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: rgb(180, 115, 41);
+}
+
+.card-produk {
+  background: url(../../aset/img/cubes.png);
+  background-repeat: no-repeat;
+  background-position-x: left;
+  transition: ease-in-out 0.6s;
+}
+.col-md-4 .card-produk:hover {
+  background: url(../../aset/img/cubes.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-color: rgb(180, 115, 41);
+}

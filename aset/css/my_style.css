@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(11, 107, 94);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* navbar */
+.navbar-home .navbar1 {
+  height: 50px;
+  background-color: rgb(4, 43, 38);
+}
+
+.navbar-home .navbar1 li {
+  list-style: none;
+  display: inline-block;
+  font-size: medium;
+  padding: 5px;
+}
+
+.navbar-home .navbar1 a {
+  text-decoration: none;
+  color: lightslategray;
+  transition: ease-in-out 0.4s;
+}
+
+.navbar-home .navbar1 a:hover {
+  color: white;
+}
+
+.navbar-home ul {
+  color: lightslategray;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.navbar {
+  background-color: rgb(17, 73, 66);
+  font-size: medium;
+}
+.search-navbar {
+  display: none;
+}
+
+.navbar-toggler {
+  background-color: rgb(184, 219, 214);
+}
+.nav-link {
+  color: white;
+}
+.nav-link:hover {
+  color: rgb(208, 242, 244);
+  transition: ease-in 0.4s;
+  text-decoration: underline;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(184, 219, 214);
+}
+/* end navbar */
+
+/* todo footer ========================================*/
+.footer-area {
+  background-color: rgb(17, 73, 66);
+  color: #fff;
+}
+
+.konten-footer {
+  padding: 20px;
+}
+
+.konten-footer h3 {
+  margin-bottom: 20px;
+}
+.konten-footer .profil {
+  text-align: justify;
+}
+
+.konten-footer .kontak a {
+  text-decoration: none;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+.konten-footer .kontak a:hover {
+  color: darkcyan;
+}
+
+.terima-kasih {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-family: monospace;
+}
+
+.terima-kasih a {
+  color: rgb(208, 242, 244);
+  transition: ease-in-out 0.3s;
+}
+.terima-kasih a:hover {
+  color: darkcyan;
+}
+.terima-kasih p {
+  display: inline;
+}
+
+.copyright-area {
+  padding: 15px 0 10px 0;
+  background-color: rgb(4, 43, 38);
+  color: white;
+  font-size: medium;
+}
+
+/* end footer */
+
+/* todo content ===========================================*/
+.konten-home {
+  margin-top: 80px;
+  padding: 20px 0 20px 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.konten-home .img-home {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.konten-home input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: rgba(32, 29, 29, 0.9);
+  background-image: url("../img/search.png");
+  background-size: 25px 25px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding: 15px 20px 15px 60px;
+  color: rgb(214, 167, 0);
+  margin-bottom: 10px;
+}
+
+.search-home input {
+  color: white;
+}
+.search-home input:focus {
+  font-style: italic;
+}
+.search-home button {
+  display: none;
+}
+.search-home .saran {
+  background-color: rgba(4, 43, 38, 0.9);
+}
+.search-home .saran p {
+  color: white;
+}
+.search-home .saran a {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+  transition: ease-in-out 0.4s;
+}
+.search-home .saran a:hover {
+  text-decoration: underline;
+  color: rgb(214, 167, 0);
+}
+
+.konten-home .card-home {
+  margin-top: 20px;
+  column-gap: 20px;
+  row-gap: 20px;
+  text-align: center;
+}
+
+.grid-home {
+  margin-top: 30px;
+  display: grid;
+  grid: auto / auto auto auto auto;
+  grid-gap: 10px;
+  color: black;
+  transition: ease-in-out 0.4s;
+}
+
+.grid-home a {
+  /* background-color: rgba(7, 63, 68, 0.585); */
+  background-color: rgba(4, 43, 38, 0.9);
+  text-align: center;
+  padding: 15px;
+  color: white;
+  border: solid 1px grey;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: ease-in-out 0.4s;
+  font-size: 100%;
+}
+
+.grid-home a:hover {
+  background-color: white;
+  color: black;
+  transform: scale(0.95);
+}
+
+/* produk dan detail produk */
+.konten {
+  margin: 50px 0 50px 0;
+}
+
+.card {
+  background-color: rgb(184, 219, 214);
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+.alert {
+  background-color: rgb(208, 242, 244);
+}
+
+.kembali {
+  text-decoration: none;
+  font-size: small;
+}
+
+.img_product {
+  transition: 0.5s;
+}
+
+.img_product:hover {
+  transform: scale(1.1);
+}
+
+.img_des {
+  height: 650px;
+  transition: 0.5s;
+}
+
+.produk_serupa .card-title {
+  font-size: small;
+  color: white;
+  padding: 0;
+}
+
+.produk_serupa .h-100 {
+  background-color: rgb(22, 154, 137);
+}
+
+.produk_serupa i {
+  color: rgb(119, 115, 115);
+}
+
+#keyword {
+  background-color: rgb(208, 242, 244);
+}
+
+.filter {
+  display: inline-block;
+  position: fixed;
+  transition: ease all 0.5s;
+  right: 15px;
+  top: 100px;
+  z-index: 1;
+}
+.filter:hover {
+  transform: scale(1.2);
+}
+
+.whatsapp {
+  display: inline-block;
+  position: fixed;
+  transition: ease all 0.8s;
+  right: 15px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.whatsapp:hover {
+  transform: scale(1.2);
+}
+
+/* layar diatas 990px = seukuran tablet*/
+@media only screen and (min-width: 990px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  .konten-footer .kontak {
+    padding-left: 150px;
+  }
+  .konten-footer .alamat {
+    padding-left: 100px;
+  }
+}
+
+/* layar dibawah 768px = seukuran hp*/
+@media only screen and (max-width: 768px) {
+  .konten-footer .kontak h3 {
+    margin-left: -3px;
+  }
+  .konten-footer li {
+    margin-left: -35px;
+  }
+  .navbar-home .navbar1 li {
+    list-style: none;
+    display: inline-block;
+    font-size: small;
+    padding: 2px;
+  }
+  .konten-home {
+    margin-top: 100px;
+  }
+
+  .konten-home .search-home input {
+    font-size: 14px;
+    background-size: 20px 20px;
+    background-position: 10px;
+    padding: 10px 20px 10px 60px;
+  }
+  .search-home .saran {
+    font-size: 12px;
+  }
+  .card {
+    font-size: 12px;
+  }
+  .grid-home {
+    grid-gap: 5px;
+  }
+  .grid-home a {
+    font-size: 40%;
+  }
+}
