@@ -50,7 +50,7 @@ if (isset($_POST['cari'])) {
    <div class="container">
       <div class="konten-home">
          <div class="img-home">
-            <img src="aset/img/pakis2.png" class="text-center" width="50%" alt="">
+            <img src="aset/img/pakis2.png" class="text-center" alt="">
          </div>
          <div class="search-home">
             <form method="POST">
