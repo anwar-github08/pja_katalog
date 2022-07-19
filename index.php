@@ -2,10 +2,10 @@
 require 'functions/functions.php';
 $data_delaer = query("SELECT * FROM dealer");
 $jml_dealer = count($data_delaer);
-$jml_dealer = $jml_dealer - 6;
+$jml_dealer = $jml_dealer - 7;
 
-$dealer = query("SELECT * FROM dealer ORDER BY nama_dealer ASC LIMIT 6");
-$dealer_more = query("SELECT * FROM dealer ORDER BY nama_dealer ASC LIMIT 6,$jml_dealer");
+$dealer = query("SELECT * FROM dealer ORDER BY nama_dealer ASC LIMIT 7");
+$dealer_more = query("SELECT * FROM dealer ORDER BY nama_dealer ASC LIMIT 7,$jml_dealer");
 if (isset($_POST['cari'])) {
    echo "<script>location='produk/produk.php?keyword=$_POST[keyword]'</script>";
    exit();
