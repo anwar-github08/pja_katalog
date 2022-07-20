@@ -59,6 +59,9 @@ if (isset($_POST['cari'])) {
             <div class="saran"></div>
          </div>
          <div class="card-home">
+            <div class="card-title">
+               <p>Dealer Kami :</p>
+            </div>
             <div class="grid-home">
                <?php foreach ($dealer as $view_dealer) : ?>
                   <a href="produk/produk.php?i=d&id=<?= $view_dealer['id_dealer'] ?>"><?= $view_dealer['nama_dealer'] ?></a>
@@ -123,6 +126,12 @@ if (isset($_POST['cari'])) {
          $('.search').keyup(function() {
             var keyword = $('.search').val();
             $('.saran').load("ajax/saran.php?keyword=" + keyword);
+
+            if (keyword != "") {
+               $(".card-home").hide()
+            } else {
+               $(".card-home").show()
+            }
          })
       })
    </script>

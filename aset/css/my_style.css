@@ -157,9 +157,15 @@ body {
 }
 .search-home .saran {
   background-color: rgba(4, 43, 38, 0.9);
+  border-radius: 10px;
 }
 .search-home .saran p {
   color: white;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.search-home .saran li {
+  margin-left: 20px;
 }
 .search-home .saran a {
   color: white;
@@ -179,8 +185,17 @@ body {
   text-align: center;
 }
 
-.grid-home {
+.konten-home .card-title {
   margin-top: 30px;
+  height: 40px;
+  border: solid 1px grey;
+  border-radius: 10px;
+  background-color: rgba(4, 43, 38, 0.9);
+  font-size: 100%;
+  padding: 5px;
+}
+.grid-home {
+  margin-top: 10px;
   display: grid;
   grid: auto / auto auto auto auto;
   grid-gap: 10px;
@@ -337,5 +352,11 @@ body {
   }
   .grid-home a {
     font-size: 40%;
+  }
+  .card-home .card-title {
+    margin-top: 30px;
+    height: 30px;
+    font-size: 60%;
+    padding: 5px;
   }
 }
