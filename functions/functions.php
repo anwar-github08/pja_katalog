@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "pakis_katalog");
+$conn = mysqli_connect("localhost", "root", "", "pja_katalog");
 
 function query($query)
 {
