@@ -58,6 +58,9 @@ if (isset($_POST['simpan'])) {
                   <label for="nama_produk" class="mb-2 mt-3">Nama Produk</label>
                   <input type="text" name="nama_produk" id="nama-produk" class="form-control" placeholder="nama produk..." autocomplete="off" required>
 
+                  <label for="bahan_aktif" class="mb-2 mt-3">Bahan Aktif</label>
+                  <input type="text" name="bahan_aktif" id="bahan-aktif" class="form-control" placeholder="bahan aktif.." autocomplete="off" required>
+
                   <label class="form-label mt-3">Foto Produk</label>
                   <input type="file" class="form-control" id="img-produk" name="img_produk" required>
 
@@ -114,7 +117,3 @@ if (isset($_POST['simpan'])) {
 </body>
 
 </html>
-
-<script>
-
-</script>

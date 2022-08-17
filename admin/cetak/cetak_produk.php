@@ -11,7 +11,6 @@ $data_produk = get_detail($_GET);
 foreach ($data_produk as $view_produk);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,11 +23,18 @@ foreach ($data_produk as $view_produk);
 
    <title>Cetak Produk</title>
 </head>
+<style>
+   @media print {
+      body {
+         font-size: large;
+      }
+   }
+</style>
 
 <body>
    <div class="konten-cetak">
       <div class="title-img">
-         <img src="../../aset/img/pakis2.png" class="text-center" width="70%" alt="">
+         <img src="../../aset/img/pakis2.png" width="70%" alt="">
       </div>
       <hr>
       <div class=" row konten">
@@ -41,10 +47,9 @@ foreach ($data_produk as $view_produk);
             <h6 class="text-muted mt-3"><?= $view_produk['jenis_produk'] ?></h6>
             <h6 class="text-muted">Dealer : <?= $view_produk['nama_dealer'] ?></h6>
             <hr>
-            <h6>Deskripsi</h6>
+            <span>Bahan Aktif : <i><?= $view_produk['bahan_aktif'] ?></i></span>
+            <h6 class="mt-3">Deskripsi</h6>
             <p class="card-text"><?= $view_produk['deskripsi_produk'] ?></p>
-            <p class="card-text">
-            </p>
             <hr>
             <h6>Kemasan</h6>
             <?php $kemasan = query_kemasan($view_produk['id_produk']) ?>
@@ -69,19 +74,23 @@ foreach ($data_produk as $view_produk);
       <hr>
       <div class="footer text-center">
          <em class="cp">&copy; 2022 CV. Pakis Jaya Abadi</em>
-         <em class="wk"><?= date('D, d M Y H:i:s') ?></em>
+         <em class="wk"><?= date('d M Y H:i:s') ?></em>
       </div>
    </div>
    <div class="tombol">
       <button class="btn btn-primary cetak" onclick="cetak()">Cetak</button>
-      <a href="../a_tampil_produk.php" class="btn btn-danger">Kembali</a>
+      <!-- <a href="../a_tampil_produk.php" class="btn btn-danger">Kembali</a> -->
    </div>
+
+
+
+
+
+   <script>
+      function cetak() {
+         window.print()
+      }
+   </script>
 </body>
 
 </html>
-
-<script>
-   function cetak() {
-      window.print()
-   }
-</script>

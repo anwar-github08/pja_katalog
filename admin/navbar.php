@@ -37,13 +37,17 @@
             </li>
             <hr>
             <li class="nav-item">
-               <a class="nav-link" href="../index.php"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home User</a>
+               <a class="nav-link cetak" href="a_cetak.php"><i class="fa fa-print fa-fw" aria-hidden="true"></i> Cetak</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+               <a class="nav-link" onclick="return confirm('Ke halaman utama..?')" href="../index.php"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Halaman Utama</a>
             </li>
             <hr>
             <li class="nav-item">
                <a href="akses/logout.php" onclick="return confirm('Logout..?')" class="nav-link"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i> Logout</a>
             </li>
-            <hr>
+            <hr class="mb-5">
          </ul>
       </div>
       <div class="col-md-10 p-5">

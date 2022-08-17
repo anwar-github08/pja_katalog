@@ -10,7 +10,7 @@
 <script>
    function navActive(namaClass) {
       namaClass = namaClass
-      $("." + namaClass).css("color", "black");
-      $("." + namaClass).css("background-color", "rgb(231, 207, 146)");
+      $("." + namaClass).css("color", "white");
+      $("." + namaClass).css("background-color", "rgb(11, 107, 94)");
    }
 </script>

@@ -31,7 +31,7 @@ $produk = getJumlahData("produk");
             <div class="card mb-3 card-dealer">
                <div class="card-header">Dealer</div>
                <div class="card-body">
-                  <h5 class="card-title">TOTAL : <?= $dealer ?> Dealer</h5>
+                  <h4 class="card-title">TOTAL : <?= $dealer ?> Dealer</h4>
                </div>
             </div>
          </a>
@@ -41,7 +41,7 @@ $produk = getJumlahData("produk");
             <div class="card mb-3 card-jenis">
                <div class="card-header">Jenis Produk</div>
                <div class="card-body">
-                  <h5 class="card-title">TOTAL : <?= $jenisProduk ?> Jenis Produk</h5>
+                  <h4 class="card-title">TOTAL : <?= $jenisProduk ?> Jenis Produk</h4>
                </div>
             </div>
          </a>
@@ -51,7 +51,7 @@ $produk = getJumlahData("produk");
             <div class="card mb-3 card-produk">
                <div class="card-header">Produk</div>
                <div class="card-body">
-                  <h5 class="card-title">TOTAL : <?= $produk ?> Produk</h5>
+                  <h4 class="card-title">TOTAL : <?= $produk ?> Produk</h4>
                </div>
             </div>
          </a>

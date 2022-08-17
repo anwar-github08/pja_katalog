@@ -1,6 +1,7 @@
 <?php
 
 $conn = mysqli_connect("localhost", "root", "", "pja_katalog");
+// $conn = mysqli_connect("localhost", "indonusa_pja", "Pja+123@@@@", "indonusa_pakis_katalog");
 
 function query($query)
 {
@@ -56,9 +57,23 @@ function get_detail($data)
    return query($query);
 }
 
+function jml_produk_sejenis($id_jenis_produk)
+{
+   $query = "SELECT * FROM produk WHERE id_jenis_produk = $id_jenis_produk";
+
+   return query($query);
+}
 function query_produk_sejenis($id_jenis_produk)
 {
    $query = "SELECT * FROM produk JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE produk.id_jenis_produk = $id_jenis_produk LIMIT 6";
+
+   return query($query);
+}
+function query_produk_sejenis_more($id_jenis_produk)
+{
+   $jml_produk_sejenis = count(jml_produk_sejenis($id_jenis_produk));
+
+   $query = "SELECT * FROM produk JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE produk.id_jenis_produk = $id_jenis_produk LIMIT 6,$jml_produk_sejenis";
 
    return query($query);
 }
@@ -120,7 +135,8 @@ function set_auto_increment($tabel)
 
 function cari($keyword)
 {
-   $query = "SELECT * FROM produk JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE nama_produk LIKE '%$keyword%' OR nama_dealer LIKE '%$keyword%' OR jenis_produk LIKE '%$keyword%' ORDER BY nama_produk ASC";
+   $query = "SELECT * FROM produk JOIN dealer ON dealer.id_dealer = produk.id_dealer JOIN jenis_produk ON jenis_produk.id_jenis_produk = produk.id_jenis_produk WHERE nama_produk LIKE '%$keyword%' OR nama_dealer LIKE '%$keyword%' OR jenis_produk LIKE '%$keyword%' OR bahan_aktif LIKE '%$keyword%' ORDER BY nama_produk ASC";
+
    return query($query);
 }
 
@@ -182,6 +198,7 @@ function simpanProduk()
    $id_dealer = $_POST['id_dealer'];
    $id_jenis_produk = $_POST['id_jenis_produk'];
    $nama_produk = strtoupper($_POST['nama_produk']);
+   $bahan_aktif = strtoupper($_POST['bahan_aktif']);
    $deskripsi = ucfirst($_POST['deskripsi']);
 
    // upload gambar
@@ -194,7 +211,7 @@ function simpanProduk()
    }
 
    // simpan di produk
-   mysqli_query($conn, "INSERT INTO produk VALUES('','$id_dealer','$id_jenis_produk','$nama_produk','$gambar','$deskripsi')");
+   mysqli_query($conn, "INSERT INTO produk VALUES('','$id_dealer','$id_jenis_produk','$nama_produk','$gambar','$bahan_aktif','$deskripsi')");
 
    // mendapatkan id_produk baru
    $id_produk = $conn->insert_id;
@@ -230,6 +247,7 @@ function ubahProduk()
    $id_dealer = $_POST['id_dealer'];
    $id_jenis_produk = $_POST['id_jenis_produk'];
    $nama_produk = strtoupper($_POST['nama_produk']);
+   $bahan_aktif = strtoupper($_POST['bahan_aktif']);
    $img_produk_lama = $_POST['img_produk_lama'];
    $deskripsi = ucfirst($_POST['deskripsi']);
 
@@ -245,7 +263,7 @@ function ubahProduk()
 
 
    // ubah data produk
-   mysqli_query($conn, "UPDATE produk SET id_dealer = '$id_dealer', id_jenis_produk = '$id_jenis_produk', nama_produk = '$nama_produk', img_produk = '$img_produk', deskripsi_produk = '$deskripsi' WHERE id_produk = $id_produk");
+   mysqli_query($conn, "UPDATE produk SET id_dealer = '$id_dealer', id_jenis_produk = '$id_jenis_produk', nama_produk = '$nama_produk', img_produk = '$img_produk', bahan_aktif = '$bahan_aktif', deskripsi_produk = '$deskripsi' WHERE id_produk = $id_produk");
 
    // hapus semua data kemasan yang id produknya = id produk
    hapus_kemasan($id_produk);
@@ -284,9 +302,77 @@ function hitungUsers()
    return $users;
 }
 
-function saran($keyword)
+
+// untuk cetak
+function produkAll()
 {
-   $query = "SELECT id_produk,nama_produk FROM produk WHERE nama_produk LIKE '%$keyword%' ORDER BY nama_produk ASC";
+   $query = "SELECT * FROM produk JOIN dealer ON dealer.id_dealer = produk.id_dealer JOIN jenis_produk ON jenis_produk.id_jenis_produk = produk.id_jenis_produk ORDER BY nama_produk ASC";
+
+   return query($query);
+}
+
+function produkJenis($id_jenis_produk)
+{
+   $query = "SELECT * FROM produk
+      JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE produk.id_jenis_produk = $id_jenis_produk ORDER BY nama_produk ASC";
+
+   return query($query);
+}
+
+
+function produkDealer($id_dealer)
+{
+   $query = "SELECT * FROM produk
+      JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE produk.id_dealer = $id_dealer ORDER BY nama_produk ASC";
+
+   return query($query);
+}
+
+function produkBahanAktif($bahan_aktif)
+{
+   $query = "SELECT * FROM produk
+      JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE bahan_aktif = '$bahan_aktif' ORDER BY nama_produk ASC";
+
+   return query($query);
+}
+
+function produkBahanAktifJenis($bahan_aktif, $id_jenis_produk)
+{
+   $query = "SELECT * FROM produk
+      JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE produk.bahan_aktif = '$bahan_aktif' AND produk.id_jenis_produk = $id_jenis_produk ORDER BY nama_produk ASC";
+
+   return query($query);
+}
+
+function produkBahanAktifDealer($bahan_aktif, $id_dealer)
+{
+   $query = "SELECT * FROM produk
+      JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE produk.bahan_aktif = '$bahan_aktif' AND produk.id_dealer = $id_dealer ORDER BY nama_produk ASC";
+
+   return query($query);
+}
+
+function produkDealerJenis($id_dealer, $id_jenis_produk)
+{
+   $query = "SELECT * FROM produk
+      JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE produk.id_dealer = $id_dealer AND produk.id_jenis_produk = $id_jenis_produk ORDER BY nama_produk ASC";
+
+   return query($query);
+}
+
+
+function produkBahanAktifJenisDealer($bahan_aktif, $id_jenis_produk, $id_dealer)
+{
+   $query = "SELECT * FROM produk
+      JOIN jenis_produk ON produk.id_jenis_produk = jenis_produk.id_jenis_produk JOIN dealer ON dealer.id_dealer = produk.id_dealer WHERE produk.bahan_aktif = '$bahan_aktif' AND produk.id_jenis_produk = $id_jenis_produk AND produk.id_dealer = $id_dealer ORDER BY nama_produk ASC";
+
+   return query($query);
+}
+
+
+function bahanAktif()
+{
+   $query = "SELECT DISTINCT bahan_aktif FROM produk";
 
    return query($query);
 }

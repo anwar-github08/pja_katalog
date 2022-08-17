@@ -76,41 +76,6 @@ date_default_timezone_set('Asia/Jakarta');
    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
-<script>
-   $(document).ready(function() {
-      $('.card-header').css("color", "white")
-      $('.btn').css("background-color", "rgb(231, 207, 146)")
-      $('.btn').css("color", "black")
-
-      $('input').focusin(function() {
-         $('.btn').css("background-color", "rgb(180, 115, 41)")
-         $('.btn').css("color", "white")
-         $(this).css("color", "white")
-         $(this).css("background-color", "rgb(180, 115, 41)")
-         $('body').css("background-color", "rgb(180, 115, 41)")
-         $('.card').css("background-color", "rgb(231, 207, 146)")
-         $('.form-label').css("color", "black")
-         $('.card-header').css("color", "black")
-      })
-      $('input').focusout(function() {
-         $('.card').css("background-color", "rgb(180, 115, 41)")
-         $('.btn').css("background-color", "rgb(231, 207, 146)")
-         $('.btn').css("color", "black")
-         $('input').css("background-color", "rgb(231, 207, 146)")
-         $('body').css("background-color", "rgb(231, 207, 146)")
-         $('.form-label').css("color", "white")
-         $('.card-header').css("color", "white")
-      })
-      // input modal
-      $('.email').focusin(function() {
-         $(this).css("background-color", "lightgrey");
-         $(this).css("color", "black")
-      })
-      $('.email').focusout(function() {
-         $(this).css("background-color", "white");
-      })
-   })
-</script>
 
 </html>
 

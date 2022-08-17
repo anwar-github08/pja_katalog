@@ -21,6 +21,13 @@ $produk = query("SELECT * FROM produk JOIN dealer ON dealer.id_dealer = produk.i
    <title>Admin Produk</title>
 </head>
 
+<style>
+   .dataTables_lengthchange,
+   .dataTables_filter {
+      color: #ffffff;
+   }
+</style>
+
 <body>
    <?php include 'navbar.php' ?>
 
@@ -32,10 +39,11 @@ $produk = query("SELECT * FROM produk JOIN dealer ON dealer.id_dealer = produk.i
       <thead>
          <tr class="text-center">
             <th>No</th>
-            <th style="width: 1%;">Gambar</th>
-            <th>Produk</th>
-            <th style="width: 30%;">Deskripsi</th>
+            <th>Gambar</th>
             <th>Dealer</th>
+            <th>Produk</th>
+            <th>Deskripsi</thstyle=>
+            <th>Bahan Aktif</thstyle=>
             <th>Jenis Produk</th>
             <th>Kemasan</th>
             <th>Aksi</th>
@@ -47,10 +55,11 @@ $produk = query("SELECT * FROM produk JOIN dealer ON dealer.id_dealer = produk.i
          foreach ($produk as $view_produk) : ?>
             <tr class="text-center">
                <td><?= $i++ ?></td>
-               <td><img src="img_produk/<?= $view_produk['img_produk'] ?>" width="30"></td>
+               <td><img src="img_produk/<?= $view_produk['img_produk'] ?>" width="40"></td>
+               <td><?= $view_produk['nama_dealer'] ?></td>
                <td><?= $view_produk['nama_produk'] ?></td>
                <td style="text-align:justify"><?= $view_produk['deskripsi_produk'] ?></td>
-               <td><?= $view_produk['nama_dealer'] ?></td>
+               <td><?= $view_produk['bahan_aktif'] ?></td>
                <td><?= $view_produk['jenis_produk'] ?></td>
                <td>
                   <a href="" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalKemasan<?= $view_produk['id_produk'] ?>">Kemasan</a>

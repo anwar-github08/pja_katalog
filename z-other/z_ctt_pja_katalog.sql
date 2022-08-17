@@ -53,3 +53,19 @@ NOTE:
 -- validasi ubah
 -- tambah lainnya pada dealer di index / accordion bootstrap
 -- query ambil data dealer after limit
+-- tambah kolom bahan aktif
+-- buat laporan dan cetak
+-- dipencrian home bisa cari dalam produk,jenis,dealer dan buat hasilnya menjadi tabel
+-- detail produk tambah bahan aktif
+-- filter juga ditambah
+-- ubah ukuran tabel index saat di hp
+-- pada footer, alamat pindah ditengah dan kontak ganti hubungi kami
+-- tambah bahan aktif pada filter dan cetak admin
+-- icon admin ubah nomor mas boim
+-- tampilkan lainnya pada produk sejenis detail produk
+pada produk kasih keterangan diatas,,semua produk
+
+ubah ukuran kolom pada produk dan cetak
+
+cara rdirect ke email
+pakai API unsplash untuk bg home

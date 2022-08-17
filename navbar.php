@@ -22,26 +22,26 @@ if (isset($_POST['cari'])) {
                </a>
                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <?php foreach ($dealer as $view_dealer) : ?>
-                     <li><a class="dropdown-item" href="../produk/produk.php?i=d&id=<?= $view_dealer['id_dealer'] ?>"><?= $view_dealer['nama_dealer'] ?></a></li>
+                     <li><a class="dropdown-item" href="produk.php?i=d&id=<?= $view_dealer['id_dealer'] ?>"><?= $view_dealer['nama_dealer'] ?></a></li>
                   <?php endforeach ?>
                   <hr>
-                  <li><a class="dropdown-item" href="../produk/produk.php">Semua Produk</a></li>
+                  <li><a class="dropdown-item" href="produk.php">Semua Produk</a></li>
                </ul>
             </li>
             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Jenis Produk
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-braille fa-fw" aria-hidden="true"></i> Jenis Produk
                </a>
                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <?php foreach ($jenis_produk as $view_jenis_produk) : ?>
-                     <li><a class="dropdown-item" href="../produk/produk.php?i=j&id=<?= $view_jenis_produk['id_jenis_produk'] ?>"><?= $view_jenis_produk['jenis_produk'] ?></a></li>
+                     <li><a class="dropdown-item" href="produk.php?i=j&id=<?= $view_jenis_produk['id_jenis_produk'] ?>"><?= $view_jenis_produk['jenis_produk'] ?></a></li>
                   <?php endforeach ?>
                   <hr>
-                  <li><a class="dropdown-item" href="../produk/produk.php">Semua Produk</a></li>
+                  <li><a class="dropdown-item" href="produk.php">Semua Produk</a></li>
                </ul>
             </li>
-            <!-- <li class="nav-item">
-               <a class="nav-link" href="#"><i class="fa fa-address-book fa-fw" aria-hidden="true"></i> Profil Perusahaan</a>
-            </li> -->
+            <li class="nav-item">
+               <a class="nav-link" href="produk.php"><i class="fa fa-cubes fa-fw" aria-hidden="true"></i> Semua Produk</a>
+            </li>
          </ul>
       </div>
       <!-- end collapse -->
@@ -58,7 +58,7 @@ if (isset($_POST['cari'])) {
 
 <!-- button whatsapp -->
 
-<a href="https://wa.me/6281325748661" onclick="return confirm('Hubungi admin?')" target="blank" class="whatsapp"><img src="../aset/img/cs.png" width="60" alt=""></a>
+<a href="https://wa.me/6282133593848" onclick="return confirm('Hubungi admin..?')" target="blank" class="whatsapp"><img src="../aset/img/cs.png" width="60" alt=""></a>
 
 
 <!-- konten -->

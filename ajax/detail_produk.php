@@ -13,12 +13,13 @@ foreach ($produk as $view_produk)
          <div class="card-body">
             <a href="produk.php" class="kembali"><i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i> Kembali</a>
             <hr>
-            <h6 class="text-muted mt-3"><?= $view_produk['jenis_produk'] ?></h6>
             <h4 class="card-title"><?= $view_produk['nama_produk'] ?></h4>
-            <p class="card-text"><?= $view_produk['deskripsi_produk'] ?></p>
-            <p class="card-text">
-            <h6 class="text-muted">Dealer : <?= $view_produk['nama_dealer'] ?> </h6>
-            </p>
+            <h6 class="mt-3"><a href="produk.php?i=j&id=<?= $view_produk['id_jenis_produk'] ?>"><?= $view_produk['jenis_produk'] ?></a></h6>
+            <h6>Dealer : <a href="produk.php?i=d&id=<?= $view_produk['id_dealer'] ?>"><?= $view_produk['nama_dealer'] ?></a></h6>
+            <hr>
+            <span>Bahan Aktif : <i><?= $view_produk['bahan_aktif'] ?></i></span>
+            <h6 class="mt-3">Deskripsi</h6>
+            <p class="card-text" style="text-align:justify"><?= $view_produk['deskripsi_produk'] ?></p>
             <hr>
             <h6>Kemasan</h6>
             <?php $kemasan = query_kemasan($view_produk['id_produk']) ?>

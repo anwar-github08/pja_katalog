@@ -79,6 +79,14 @@ body {
 .konten-footer .profil {
   text-align: justify;
 }
+.konten-footer .alamat a {
+  text-decoration: none;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
+.konten-footer .alamat a:hover {
+  color: darkcyan;
+}
 
 .konten-footer .kontak a {
   text-decoration: none;
@@ -145,7 +153,9 @@ body {
   color: rgb(214, 167, 0);
   margin-bottom: 10px;
 }
-
+.search-home {
+  text-align: center;
+}
 .search-home input {
   color: white;
 }
@@ -159,25 +169,10 @@ body {
   background-color: rgba(4, 43, 38, 0.9);
   border-radius: 10px;
 }
-.search-home .saran p {
-  color: white;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-.search-home .saran li {
-  margin-left: 20px;
-}
-.search-home .saran a {
-  color: white;
+.saran a {
   text-decoration: none;
-  font-style: italic;
-  transition: ease-in-out 0.4s;
+  color: white;
 }
-.search-home .saran a:hover {
-  text-decoration: underline;
-  color: rgb(214, 167, 0);
-}
-
 .konten-home .card-home {
   margin-top: 20px;
   column-gap: 20px;
@@ -190,7 +185,7 @@ body {
   height: 40px;
   border: solid 1px grey;
   border-radius: 10px;
-  background-color: rgba(4, 43, 38, 0.9);
+  background-color: rgb(4, 43, 38);
   font-size: 100%;
   padding: 5px;
 }
@@ -217,6 +212,23 @@ body {
 }
 
 .grid-home a:hover {
+  background-color: white;
+  color: black;
+  transform: scale(0.95);
+}
+.semua-produk a {
+  background-color: rgba(4, 43, 38, 0.9);
+  padding: 8px;
+  font-size: small;
+  border: 1px solid grey;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: ease-in-out 0.4s;
+  width: 20%;
+}
+
+.semua-produk a:hover {
   background-color: white;
   color: black;
   transform: scale(0.95);
@@ -268,8 +280,20 @@ body {
   background-color: rgb(22, 154, 137);
 }
 
-.produk_serupa i {
-  color: rgb(119, 115, 115);
+.produk_serupa .a-more {
+  background-color: rgb(22, 154, 137);
+  color: white;
+  padding: 5px;
+  font-size: small;
+  border: 1px solid rgb(15, 108, 96);
+  border-radius: 5px;
+  transition: ease-in-out 0.4s;
+  width: 94%;
+}
+
+.produk_serupa .a-more:hover {
+  background-color: white;
+  color: black;
 }
 
 #keyword {
@@ -307,20 +331,29 @@ body {
     display: block;
   }
   .konten-footer .kontak {
-    padding-left: 150px;
+    padding-left: 100px;
   }
   .konten-footer .alamat {
-    padding-left: 100px;
+    padding-left: 120px;
+  }
+  .konten-footer .kontak p {
+    margin-top: -15px;
   }
 }
 
 /* layar dibawah 768px = seukuran hp*/
 @media only screen and (max-width: 768px) {
-  .konten-footer .kontak h3 {
+  /* .konten-footer .kontak h3 {
     margin-left: -3px;
   }
   .konten-footer li {
     margin-left: -35px;
+  } */
+  .konten-footer .alamat {
+    margin-top: 30px;
+  }
+  .konten-footer .kontak {
+    margin-top: 30px;
   }
   .navbar-home .navbar1 li {
     list-style: none;
@@ -341,9 +374,6 @@ body {
     background-position: 10px;
     padding: 10px 20px 10px 60px;
   }
-  .search-home .saran {
-    font-size: 12px;
-  }
   .card {
     font-size: 12px;
   }
@@ -353,10 +383,30 @@ body {
   .grid-home a {
     font-size: 40%;
   }
+  .semua-produk a {
+    font-size: 40%;
+  }
   .card-home .card-title {
     margin-top: 30px;
     height: 30px;
     font-size: 60%;
     padding: 5px;
+  }
+
+  .search-home .saran table {
+    font-size: 8px;
+  }
+
+  .search-home .saran table td img {
+    width: 40%;
+  }
+
+  .footer-area {
+    font-size: 80%;
+  }
+
+  .produk_serupa .a-more {
+    padding: 3px;
+    font-size: 80%;
   }
 }

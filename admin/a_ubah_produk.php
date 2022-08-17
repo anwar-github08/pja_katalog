@@ -10,7 +10,7 @@ foreach ($produk as $view_detail_produk);
 if (isset($_POST['simpan'])) {
    ubahProduk();
 } else {
-   // untuk ubah kemasan
+   // untuk kemasan
    // hapus data di tmp_kemasan terlebih dahulu
    hapus_tmp_kemasan();
    // set id biar dimulai dari 1
@@ -74,6 +74,9 @@ if (isset($_POST['simpan'])) {
 
                   <label for="nama_produk" class="mb-2 mt-3">Nama Produk</label>
                   <input type="text" name="nama_produk" id="nama-produk" class="form-control" value="<?= $view_detail_produk['nama_produk'] ?>" placeholder="nama produk..." autocomplete="off" required>
+
+                  <label for="bahan_aktif" class="mb-2 mt-3">Bahan Aktif</label>
+                  <input type="text" name="bahan_aktif" id="bahan-aktif" class="form-control" value="<?= $view_detail_produk['bahan_aktif'] ?>" placeholder="bahan aktif.." autocomplete="off" required>
 
                   <label class="form-label mt-3 d-block">Foto Produk</label>
                   <img src="img_produk/<?= $view_detail_produk['img_produk'] ?>" width="40" alt="" class="mb-2">
