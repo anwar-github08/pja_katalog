@@ -21,13 +21,6 @@ $produk = query("SELECT * FROM produk JOIN dealer ON dealer.id_dealer = produk.i
    <title>Admin Produk</title>
 </head>
 
-<style>
-   .dataTables_lengthchange,
-   .dataTables_filter {
-      color: #ffffff;
-   }
-</style>
-
 <body>
    <?php include 'navbar.php' ?>
 

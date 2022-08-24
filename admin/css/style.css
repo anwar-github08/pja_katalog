@@ -68,7 +68,15 @@ body hr {
   margin-right: 30px;
 }
 
-.dataTables_lengthchange,
+.dataTables_info {
+  color: black;
+}
+
+.dataTables_length {
+  color: black;
+}
+
 .dataTables_filter {
-  color: #ffffff;
+  color: black;
+  margin-bottom: 10px;
 }
